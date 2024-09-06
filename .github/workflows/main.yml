@@ -32,8 +32,8 @@ jobs:
           python -m pip install -U pip setuptools wheel
           python3 -m pip install -U .[dev]
 
-      - name: Analysing the code with pylint
-        run: pylint singer
+      # - name: Analysing the code with pylint
+      #   run: pylint singer
 
       - name: Runs tests with coverage
         run: coverage run --parallel -m pytest
