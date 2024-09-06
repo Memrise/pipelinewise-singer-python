@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.0 (2024-09-06)
+  * Updated all dependency versions
+  * Changed CI to test against Python 3.11 and 3.12
+
 ## 2.0.1 (2021-11-23)
   * Fixed an issue when `format_message` returned newline character
 
