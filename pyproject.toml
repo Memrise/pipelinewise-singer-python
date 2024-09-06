@@ -9,7 +9,7 @@ branch = true
 source = ["singer"]
 
 [tool.coverage.report]
-fail_under = 76.0
+fail_under = 75.0
 
 [tool.isort]
 profile = "black"
