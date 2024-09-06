@@ -39,10 +39,11 @@ jobs:
         run: coverage run --parallel -m pytest
 
       - name: Upload coverage data
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: coverage-data
           path: ".coverage.*"
+          include-hidden-files: true
 
   coverage:
     runs-on: ubuntu-22.04
@@ -62,7 +63,7 @@ jobs:
         python3 -m pip install -U .[dev]
 
     - name: Download coverage data
-      uses: actions/download-artifact@v3.0.0
+      uses: actions/download-artifact@v4
       with:
         name: coverage-data
 
@@ -77,7 +78,3 @@ jobs:
     - name: Display human readable report
       run: |
         coverage report
-
-    # Optional if you want to use codecov.io
-    # - name: Upload coverage report
-    #   uses: codecov/codecov-action@v3
