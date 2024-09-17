@@ -27,7 +27,7 @@ setup(name="pipelinewise-singer-python",
       extras_require={
           'dev': [
               'pylint==3.2.7',
-              'pytest==8.3.2',
+              'pytest==8.3.3',
               'coverage[toml]==7.6.1',
           ]
       },
